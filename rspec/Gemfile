@@ -4,5 +4,4 @@ gem 'rspec'
 
 group :test do
   gem 'timecop'
-  gem 'factory_girl'
 end
