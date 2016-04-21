@@ -36,6 +36,7 @@ RSpec.describe Bomb do
 
       it 'is old' do
         expect(bomb.production_date.year).to eq(1970)
+        expect(bomb).to be_old
       end
     end
 

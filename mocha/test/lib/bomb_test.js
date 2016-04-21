@@ -52,7 +52,7 @@ describe('Bomb', () => {
   });
 
   describe('#getProductionDate', () => {
-    context('in the past', () => {
+    context('in the future', () => {
       before(() => {
         timekeeper.travel(new Date(1));
       });
@@ -62,7 +62,8 @@ describe('Bomb', () => {
       });
 
       it('is old', () => {
-        expect(bomb.getProductionDate().getYear()).to.equal(70)
+        expect(bomb.getProductionDate().getFullYear()).to.equal(1970);
+        expect(bomb).to.be.old;
       });
     });
 
